@@ -5,6 +5,8 @@ class ArticlesController < ApplicationController
 
 	def show
 		@article = Article.find(params[:id])
+		@comment = Comment.new
+		@comment.article_id = @article.id
 	end
 
 	def new
@@ -32,7 +34,8 @@ class ArticlesController < ApplicationController
 			redirect_to @article
 			flash.notice = "Article '#{@article.title}' Updated!"
 		else
-			render update_article_path
+			flash.notice = @article.errors.full_messages.join(", ")
+			redirect_to edit_article_path
 		end
 	end
 
