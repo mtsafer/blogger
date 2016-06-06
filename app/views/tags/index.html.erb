@@ -1,0 +1,8 @@
+<h1>Tags</h1>
+<ul>
+	<% @tags.each do |tag| %>
+		<li><%= link_to tag.name, tag, class: "tag_item btn btn-primary" %><%= link_to "Delete", tag, method: :delete, data: { confirm: "Really delete this tag?" }, class: "btn btn-danger" %></li>
+	<% end %>
+</ul>
+
+<%= link_to "Return to Articles", root_path, class: "btn btn-primary" %>
