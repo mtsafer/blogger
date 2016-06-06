@@ -2,4 +2,5 @@
 <br>
 <p><%= @article.body %></p>
 <br>
+<%= link_to "Delete", @article, method: :delete, data: {confirm: "Really delete this article?"} %>
 <%= link_to "Back to Articles List", articles_path %>
