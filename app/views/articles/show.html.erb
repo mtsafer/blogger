@@ -6,6 +6,9 @@
   <% end %>
 </p>
 <br>
+<% if @article.image.exists? %>
+	<p><%= image_tag @article.image.url, class: "image"%></p>
+<% end %>
 <p><%= @article.body %></p>
 <br>
 <h3>Comments (<%= @article.comments.count %>)</h3>
