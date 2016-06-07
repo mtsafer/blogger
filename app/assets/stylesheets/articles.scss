@@ -1,3 +1,44 @@
 // Place all the styles related to the articles controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+body{
+	background: url('http://img.geocaching.com/cache/85ee4f54-b50d-435c-b13c-631f4e8121b8.jpg') no-repeat center center fixed;
+	background-size: cover;
+}
+
+#title{
+	color: rgba(255,255,255,0.7);
+}
+
+.article_title{
+	padding-left: 50px;
+	margin-top: 20px;
+}
+
+.article_title:hover{
+	text-decoration: none;
+}
+
+.even{
+	background-color: rgba(0,0,0,0.2);
+	.article_title{
+		color: rgba(255,255,255,0.5);
+	}
+}
+
+.odd{
+	background-color: rgba(255,255,255,0.2);
+	.article_title{
+		color: rgba(0,0,0,0.5);
+	}
+}
+
+.comment{
+	height: 100px;
+	border-radius: 4px;
+}
+
+#articles{
+	text-align: left;
+}
